@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="icon" href="./inno_img/logo.jpg" />
+    <title>Our Machinery - InnoSparks Industries</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+            background-color: #f8f6f6;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#f3f5f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #f5b222;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        h1, h2 {
+            color: #3677b8;
+        }
+        .machinery-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+        .machine {
+            background: #d7e8f4;
+            border-radius: 10px;
+            padding: 20px;
+            width: 320px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+            text-align: left;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .machine.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+      
+        .machine img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .button-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #2397e4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+        .button:hover {
+            background-color: #f5b222;
+        }
+        .footer {
+            background: #3677b8;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0 10px 0;
+            margin-top: 40px;
+        }
+        .footer p { margin: 0; font-size: 1em; }
+      
+        .container h1 {
+            color: white;
+            text-shadow: 2px 2px 8px #000;
+            margin: 0;
+            font-size: 3.5em;
+            z-index: 1;
+        }
+        .logo-normal {
+            position:relative;
+            left: 20px;
+            width: 25%;
+            max-width: 200px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    
+     
+    </style>
+   
+</head>
+<body>
+        
+        <center>
+            <div class="container" >
+                <h1>Machinery</h1>
+            </div>
+       
+        <div class="machinery-list">
+            <div class="machine">
+                <img src="./inno_img/cnc.jpg" alt="CNC Machine" />
+                <h2>CNC Fiber Laser Cutting Machine</h2>
+                <ul>
+                    <li>STAINLESS STEEL: Up to 10mm</li>
+                    <li>MILD STEEL: Up to 20mm</li>
+                    <li>ALUMINIUM: Up to 8mm</li>
+                    <li>TITANIUM: Up to 4mm</li>
+                    <li>BRASS: Up to 5mm</li>
+                    <li>COPPER: Up to 3mm</li>
+                    <li>GALVANIZED STEEL: Up to 8mm</li>
+                    <li>BED SIZE 1500 x 3000</li>
+                </ul>
+                
+            </div>
+            <div class="machine">
+                <img src="./inno_img/bending.jpg" alt="CNC Cutting" />
+                <h2>CNC-Bending Machine</h2>
+                <ul>
+                    <li>Pressing Force: 160 TON</li>
+                    <li>Maximum Bending Length: 3300mm</li>
+                    <li>Controller : DELEM66T</li>
+                    <li>AXES : 6+1</li>
+                    <li>PRESS BEAM DEPTH ACCURACY : &PlusMinus;0.01mm</li>
+                    <li>PRESS BEAM DEPTH REPEATABILITY : &PlusMinus;0.01mm</li>
+                    <li>Back Gauge Accuracy : &PlusMinus;0.1mm</li>
+                </ul>
+            </div>
+            <div class="machine">
+                <img src="./inno_img/laser.jpg" alt="Machinery" />
+                <h2>Laser-Engraving</h2>
+                <ul>
+                    <li>Marking depth: Up to 0.4mm</li>
+                    <li>Bed size: 300 x 300 mm</li>
+                    <li>Laser Power: 50W</li>
+                    <li>Engraves on MS, SS, GI, Brass, AL, Powder coated, Phosphated and all coated metal surface</li>
+                </ul>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="index.html" class="button">Home</a>
+            <a href="about_us.html" class="button">About Us</a>
+            <a href="contact.html" class="button">Contact</a>
+            <a href="Our_Products.html" class="button">Our Products</a>
+        </div>
+        <div class="container" style="background: #d7e8f4; margin-top: 30px;">
+            <h1 style="color: #fff; text-shadow: 2px 2px 8px #000;">Machinery Details</h1>
+            <p style="color: #02111c; font-size: 1.2em;">Below are the detailed specifications and features of our advanced machinery used at InnoSparks Industries.</p>
+            <table style="width:100%; background:#fff; color:#333; border-radius:8px; overflow:hidden; margin-top:20px;">
+                <tr style="background:#f5b222; color:#222;">
+                    <th style="padding:10px;">Machine</th>
+                    <th style="padding:10px;">Specification</th>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">Laser Cutting Machine</td>
+                    <td style="padding:10px;">3 KW</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">CNC-Bending Machine</td>
+                    <td style="padding:10px;">160 TON</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">CNC Laser-Engraving</td>
+                    <td style="padding:10px;">50 W</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">Drilling Machine</td>
+                    <td style="padding:10px;">50 W</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">MIG Welding</td>
+                    <td style="padding:10px;">3 phase</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">Arc Welding</td>
+                    <td style="padding:10px;">-</td>
+                </tr>
+    
+                <tr>
+                    <td style="padding:10px;">Hand Drilling</td>
+                    <td style="padding:10px;">-</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">Hand Grinding</td>
+                    <td style="padding:10px;">-</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">Air Compressor</td>
+                    <td style="padding:10px;">15 Hp</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">A-Crane</td>
+                    <td style="padding:10px;">3 TON</td>
+                </tr>
+            </table>
+        </div>
+         <div class="footer">
+        <p>&copy; 2025 InnoSparks Industries | Speacialist in : Laser Cutting & Sheet Metal Fabrication | An ISO 9001:2015 Certified Company</p>
+    </div>
+    
+    </center>
+     <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        const machines = document.querySelectorAll('.machinery-list .machine');
+        machines.forEach((machine, idx) => {
+            setTimeout(() => {
+                machine.classList.add('show');
+            }, 200 + idx * 200);
+        });
+    });
+    </script>
+</body>
+</html>

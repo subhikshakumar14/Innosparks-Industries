@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./inno_img/logo.jpg" />
+    <title>About Us - InnoSparks Industries</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #fff;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            margin: 10px auto 0 auto;
+            transition: margin-top 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .container.lift {
+            margin-top: -80px;
+        }
+         h2 {
+            color: #3677b8;
+        }
+        h1{
+            color: #3677b8;
+            margin: 0;
+            font-size: 3.5em;
+           
+
+
+        }
+        .profile-img {
+            width: 10%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .button-container {
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #f58207f3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #289fdb;
+        }
+        .footer {
+            background: #3677b8;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0 20px 0;
+            margin-top: 40px;
+        }
+        .footer p { margin: 0; font-size: 1em; }
+        
+        .certificates-section {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px;
+            margin: 60px auto 0 auto;
+            max-width: 1100px;
+            opacity: 0;
+            transform: scale(0.95) translateY(60px);
+            transition: opacity 1.2s cubic-bezier(0.23, 1, 0.32, 1), transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .certificates-section.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        .certificate-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(54,119,184,0.13);
+            overflow: hidden;
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 18px 12px 12px 12px;
+            min-width: 220px;
+            max-width: 340px;
+            transition: box-shadow 0.4s, transform 0.4s;
+        }
+        .certificate-card:hover {
+            box-shadow: 0 8px 32px rgba(245,178,34,0.25);
+            transform: translateY(-8px) scale(1.03);
+        }
+        .certificate-img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .certificate-title {
+            font-weight: bold;
+            color: #157790;
+            font-size: 1.1em;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+        @media (max-width: 900px) {
+            .certificates-section { flex-direction: column; align-items: center; }
+            .certificate-card { max-width: 95vw; }
+        }
+        .top-image-section {
+            position: relative;
+            width: 100%;
+            height: 340px;
+            overflow: hidden;
+            transition: height 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        #top-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(1);
+            transition: filter 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .top-image-section.shrink {
+            height: 50px;
+        }
+        #top-hero-img.shrink {
+            filter: brightness(0.7);
+        }
+      
+.top-image-section {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    transition: height 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1;
+}
+#top-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    transition: filter 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.container {
+    background: #fff;
+    max-width: 900px;
+    margin: -170px auto 0 auto; /* Pull up half over the top image */
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    position: relative;
+    z-index: 2;
+    transition: margin-top 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.container.lift {
+    margin-top: -250px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        margin: -80px 10px 0 10px;
+        padding: 20px 5vw;
+    }
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class="top-image-section">
+        <img src="./inno_img/about3.jpg" alt="InnoSparks Main" id="top-hero-img" />
+        
+    </div>
+    <div class="container">
+
+         <h1>About Us</h1>
+        <p></p>
+        <h2>Our Vision & Values</h2>
+        <ul>
+            <li>Precision engineering and quality assurance</li>
+            <li>On-time project delivery</li>
+            <li>Modern technology and continuous improvement</li>
+            <li>Customer satisfaction and trust</li>
+            <li>Corporate social responsibility and sustainability</li>
+        </ul>
+        <h2>Our Team</h2>
+        <p>Innosparks Industries, Led by our visionary founder Mr. Krithish Kumar, we foster a collaborative culture where every team member plays a vital role in driving innovation and excellence. we believe that great manufacturing begins with great teamwork. Our success is powered by a collaborative environment, where engineers, designers, technicians, and support staff work together with a shared vision — delivering quality, innovation, and efficiency in every product.</p>
+        <div class="button-container">
+            <a href="index.html" class="button">Home</a>
+            <a href="machinery.html" class="button">Machinery</a>
+            <a href="contact.html" class="button">Contact</a>
+            <a href="Our_Products.html" class="button">Our Products</a>
+        </div>
+    </div>
+    <div class="certificates-section" id="certificates-section">
+         <div class="certificate-card">
+                <img src="./inno_img/gstog.jpg" alt="GST Registration" class="certificate-img" />
+                <div class="certificate-title">GST Registration Certificate</div>
+            </div>
+                        <div class="certificate-card">
+                <img src="./inno_img/iso.jpg" alt="ISO 9001:2015 Certificate" class="certificate-img" />
+                <div class="certificate-title">ISO 9001:2015 Certificate</div>
+            </div>
+            <div class="certificate-card">
+                <img src="./inno_img/udayamogg.jpg" alt="Udyam Registration" class="certificate-img" />
+                <div class="certificate-title">UDAYAM Registration Certificate</div>
+            </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 InnoSparks Industries | Speacialist in : Laser Cutting & Sheet Metal Fabrication  | An ISO 9001:2015 Certified Company</p>
+    </div>
+    <script>
+window.addEventListener('DOMContentLoaded', function() {
+    const certSection = document.getElementById('certificates-section');
+    const mainContainer = document.querySelector('.container');
+    const topImgSection = document.querySelector('.top-image-section');
+    const topImg = document.getElementById('top-hero-img');
+    function onScroll() {
+        const certRect = certSection.getBoundingClientRect();
+        const contRect = mainContainer.getBoundingClientRect();
+       
+        if (contRect.top < window.innerHeight - 100) {
+            mainContainer.classList.add('visible');
+        }
+        if (certRect.top < window.innerHeight - 100) {
+            certSection.classList.add('visible');
+        }
+
+        if (window.scrollY > 50) {
+            topImgSection.classList.add('shrink');
+            topImg.classList.add('shrink');
+            mainContainer.classList.add('lift');
+        } else {
+            topImgSection.classList.remove('shrink');
+            topImg.classList.remove('shrink');
+            mainContainer.classList.remove('lift');
+        }
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+});
+    </script>
+</body>
+</html>

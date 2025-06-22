@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./inno_img/logo.jpg" />
+    <title>Our Products - InnoSparks Industries</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            background-color: #f8f6f6;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f5f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #f5b222;
+            max-width: 1100px;
+            margin: 40px auto 0 auto;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        h1, h2 {
+            color: #3677b8;
+        }
+        .container h1 {
+            color: white;
+            text-shadow: 2px 2px 8px #000;
+            margin: 0;
+            font-size: 3.5em;
+            z-index: 1;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0 30px 0;
+            justify-content: center;
+            text-align: ;
+        }
+        .product-card {
+            background: #d7e8f4;
+            border-radius: 14px;
+            padding: 24px 22px 18px 22px;
+            width: 340px;
+            box-shadow: 0 1px 12px rgba(0,0,0,0.10);
+            text-align: left;
+            opacity: 0;
+            transform: scale(0.92) translateY(60px) rotateY(20deg);
+            transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+                        transform 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+                        box-shadow 0.4s;
+            position: relative;
+        }
+        .product-card.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0) rotateY(0);
+            box-shadow: 0 8px 32px rgba(245,178,34,0.18);
+        }
+        .product-card:hover {
+            box-shadow: 0 12px 36px rgba(54,119,184,0.18);
+            transform: scale(1.04) translateY(-8px) rotateY(-2deg);
+        }
+        .product-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 16px;
+            background: #fff;
+        }
+        .product-title {
+            font-size: 1.35em;
+            font-weight: bold;
+            color: #2397e4;
+            margin-bottom: 10px;
+        }
+        .product-desc {
+            font-size: 1em;
+            color: #222;
+            margin-bottom: 12px;
+        }
+        .product-features {
+            margin: 0 0 8px 0;
+            padding-left: 18px;
+            color: #3677b8;
+        }
+        .button-container {
+            margin: 30px 0 10px 0;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 22px;
+            margin: 5px;
+            background-color: #2397e4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background 0.2s;
+        }
+        .button:hover {
+            background-color: #f5b222;
+            color: #fafefe;
+        }
+        .footer {
+            background: #3677b8;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0 10px 0;
+            margin-top: 40px;
+        }
+        .footer p { margin: 0; font-size: 1em; }
+        .video-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            margin-top: 40px;
+            opacity: 0;
+            transform: scale(0.92) translateY(60px);
+            transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+                        transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .video-section.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        .video-row {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .product-video {
+            width: 340px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            background: #000;
+            cursor: pointer;
+            transition: box-shadow 0.4s, transform 0.4s, filter 0.4s;
+        }
+        .product-video.active {
+            box-shadow: 0 0 0 6px #2397e4, 0 2px 12px rgba(0,0,0,0.18);
+            transform: scale(1.08) rotate(-2deg);
+            filter: brightness(1.1) saturate(1.2);
+            z-index: 2;
+        }
+        @media (max-width: 900px) {
+            .product-list { flex-direction: column; align-items: center; }
+            .product-card { max-width: 95vw; }
+        }
+        @media (max-width: 1100px) {
+            .video-row {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h1>Our Products</h1>
+
+        </div>
+        <p style="text-align: center; font-size: 1.1em; color: #000305;">Explore our range of innovative products designed to meet your needs.</p>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="./inno_img/product1.jpg" alt="Sheet Metal Manufacturing" />
+                <div class="product-title">Sheet Metal Manufacturing</div>
+                
+                  
+            </div>
+            <div class="product-card">
+                <img src="./inno_img/product2.jpg" alt="R&D Projects" />
+                <div class="product-title">R&D Projects</div>
+               
+            </div>
+            <div class="product-card">
+                <img src="./inno_img/product3.jpg" alt="Enclosures and Pannel box" />
+                <div class="product-title">Enclosures and Pannel box</div>
+               
+            </div>
+            <div class="product-card">
+                <img src="./inno_img/product4.jpg" alt="customized products" />
+                <div class="product-title">customized products</div>
+               
+            </div>
+             <div class="product-card">
+                <img src="./inno_img/product5.jpg" alt="Laser Spares" />
+                <div class="product-title">Laser Spares</div>
+            
+                
+            </div>
+        
+        </div>
+        <div class="button-container">
+            <a href="index.html" class="button">Home</a>
+            <a href="about_us.html" class="button">About Us</a>
+            <a href="machinery.html" class="button">Our Machinery</a>
+            <a href="contact.html" class="button">Contact</a>
+        </div>
+        <div class="video-section" id="video-section">
+            <h2 style="color:#2397e4; margin-bottom:16px;">See Our Products in Action</h2>
+            <div class="video-row">
+                <video id="productVideo" class="product-video" controls poster="./inno_img/bg_less_img.jpg">
+                    <source src="./inno_img/bending.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video class="product-video" controls poster="./inno_img/laser.jpg">
+                    <source src="./inno_img/laser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video class="product-video" controls poster="./inno_img/enclosure.mp4">
+                    <source src="./inno_img/enclosure.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 InnoSparks Industries | Speacialist in : Laser Cutting & Sheet Metal Fabrication  | An ISO 9001:2015 Certified Company</p>
+        </div>
+    </center>
+    <script>
+    // Product card transition
+    window.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.product-card');
+        const videoSection = document.getElementById('video-section');
+        const videos = document.querySelectorAll('.product-video');
+        function showCardsOnScroll() {
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 60) {
+                    card.classList.add('visible');
+                }
+            });
+        }
+        function showVideoOnScroll() {
+            const rect = videoSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                videoSection.classList.add('visible');
+                window.removeEventListener('scroll', showVideoOnScroll);
+            }
+        }
+        window.addEventListener('scroll', showCardsOnScroll);
+        window.addEventListener('scroll', showVideoOnScroll);
+        showCardsOnScroll();
+        showVideoOnScroll();
+        // Video click effect
+        videos.forEach(video => {
+            video.addEventListener('click', function() {
+                videos.forEach(v => v.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+    </script>
+</body>
+</html>

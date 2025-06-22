@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InnoSparks Industries</title>
+    <link rel="icon" href="./inno_img/logo.jpg" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f7f5f3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            
+            background: url('./inno_img/bg.jpg') center/cover no-repeat;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        filter: brightness(0.7);}
+            .main{
+            color: hsl(210, 40%, 98%);
+            text-shadow: 2px 2px 8px #000;
+            position: relative;
+            filter: brightness(1);
+            
+            
+        }
+        .iso{
+            font-weight: bold;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #e6e4e3;
+        }
+        .hero-logo {
+            position: static;
+            margin: 0 auto 20px auto;
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 20%;
+            background: transparent;
+            padding: 0;
+            z-index: 2;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            filter: brightness(1);
+        }
+        .main h1, .button-container, .main p {
+            text-align: center;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .button#mail{
+            
+            background-color:#3f82c5 ;
+            
+
+        }
+        .main h1 {
+            font-size: 5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0 0 0;
+        }
+        .button-container {
+            margin-top: 30px;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 28px;
+            margin: 5px;
+            background-color: #f58207f3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background 0.2s;
+        }
+        .button:hover {
+            
+            background-color: #2674a96a;
+        }
+        ul li {
+        position: relative;
+        left: 0;
+        transition: left 0.4s ease;
+        }
+        ul li:hover {
+         left: 10px;
+         color: teal;
+        }
+        .section {
+            background-color: #e6eaed;
+            margin: 40px auto;
+            padding: 20px 20px;
+            max-width: 1100px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            
+        }
+        .section h2 {
+            color: #3f82c5;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        #mail{
+            color: #050505
+        }
+        
+        .info-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info-list li {
+            font-family: "play",  sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            flex: 1 1 200px;
+            background: #a8d0ec;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1em;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 320px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+        }
+        .footer {
+            background: #3677b8;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0 10px 0;
+            margin-top: 40px;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+        .certificates-profile {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px;
+            margin: 40px auto 0 auto;
+            max-width: 1100px;
+            opacity: 0;
+            transform: scale(0.95) translateY(60px);
+            transition: opacity 1.2s cubic-bezier(0.23, 1, 0.32, 1), transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .certificates-profile.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        .certificate-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(54,119,184,0.13);
+            overflow: hidden;
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 18px 12px 12px 12px;
+            min-width: 220px;
+            max-width: 340px;
+            transition: box-shadow 0.4s, transform 0.4s;
+        }
+        .certificate-card:hover {
+            box-shadow: 0 8px 32px rgba(245,178,34,0.25);
+            transform: translateY(-8px) scale(1.03);
+        }
+        .certificate-img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .certificate-title {
+            font-weight: bold;
+            color: #3677b8;
+            font-size: 1.1em;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 2em; }
+            .section { padding: 20px 5px; }
+            .gallery img { width: 100%; height: 160px; }
+        }
+        @media (max-width: 900px) {
+            .certificates-profile { flex-direction: column; align-items: center; }
+            .certificate-card { max-width: 95vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="./inno_img/bgless.png" alt="InnoSparks Industries Logo" class="hero-logo" />
+        
+        <h1>InnoSparks Industries</h1>
+       
+        <div class="button-container">
+            <a href="index.html" class="button">Home</a>
+            <a href="about_us.html" class="button">About Us</a>
+            <a href="machinery.html" class="button">Machinery</a>
+            <a href="contact.html" class="button">Contact</a>
+            <a href="Our_Products.html" class="button"> Our Product</a>
+            
+        </div>
+         <p class="iso">Dream Big, Work Hard, Make it Happen. ISO 9001:2015 Certified Company</p>
+    </div>
+    <div class="section">
+        <h2>Contact Information</h2>
+        <ul class="info-list">
+            <li><strong>Phone:</strong><br>9080407729<br>8220405090</li>
+            <li><strong>Email:</strong> <a href="mailto:innosparksindustries@gmail.com"  id="mail" class="button">innosparksindustries@gmail.com</a></li>
+            <li><strong>Address:</strong><br>No. 47/1, Omprakash Nagar, Kundrathur, Chennai 600 069</li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Our Clients</h2>
+        <ul class="info-list">
+            <li>20+ MNC Clients</li>
+            <li>100+ Successful Projects </li>
+            <li>20+ R&D Projects</li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Our Machineries</h2>
+        <div class="gallery">
+            <img src="./inno_img/cnc.jpg" alt="CNC Machine" />
+            <img src="./inno_img/bending.jpg" alt="Machinery" />
+            <img src="./inno_img/laser.jpg" alt="CNC Cutting" />
+            <a href="machinery.html" class="button">Machinery</a>
+            
+        </div>
+        <center>
+        <p style="margin-top:20px;">We use world-class CNC and laser machines for precision and efficiency in every project. </p>
+        <ul class="info-list">
+            <li onclick="window.location.href='machinery.html'" style="cursor:pointer;">Fiber Laser Cutting</li>
+            <li onclick="window.location.href='machinery.html'" style="cursor:pointer;">CNC Bending (7 Axis)</li>
+            <li onclick="window.location.href='machinery.html'" style="cursor:pointer;">Laser Spares</li>
+            <li onclick="window.location.href='machinery.html'" style="cursor:pointer;">Metal and Non-Metal Engraving</li>
+            <li onclick="window.location.href='machinery.html'" style="cursor:pointer;">Welding</li>
+            <li onclick="window.location.href='machinery.html'" style="cursor:pointer;">Drilling & Taping</li>
+            <li onclick="window.location.href='machinery.html'" style="cursor:pointer;">CNC Milling</li>
+            <li onclick="window.location.href='machinery.html'" style="cursor:pointer;">Pipe Cutting</li>
+        </ul>
+        <p> All kinds of Sheet Metal Fabrication </p>
+        <ul class="info-list">
+        <li>MS | SS | ALUMINIUM | TITANIUM | COPPER | BRASS | GI </li>
+        </ul>
+        </center>
+
+    </div>
+    <div class="section">
+        <h2>Certificates</h2>
+        <div class="certificates-profile" id="certificates-profile">
+
+            <div class="certificate-card">
+                <img src="./inno_img/gstog.jpg" alt="GST Registration" class="certificate-img" />
+                <br>
+                 <div class="certificate-title">GST Registration Certificate</div>
+            </div>
+                        <div class="certificate-card">
+                <img src="./inno_img/iso.jpg" alt="ISO 9001:2015 Certificate" class="certificate-img" />
+                <br>
+                <div class="certificate-title">ISO 9001:2015 Certificate</div>
+            </div>
+            <div class="certificate-card">
+                <img src="./inno_img/udayamogg.jpg" alt="Udyam Registration" class="certificate-img" />
+                <br>
+                <div class="certificate-title">UDAYAM Registration Certificate</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 InnoSparks Industries | Speacialist in : Laser Cutting & Sheet Metal Fabrication  | An ISO 9001:2015 Certified Company</p>
+        <br>
+        <p>
+            <strong>Contact Information:</strong><br>
+            Phone: <a href="tel:9080407729">9080407729</a>, <a href="tel:8220405090">8220405090</a><br>
+            Email: <a href="mailto:innosparksindustries@gmail.com">innosparksindustries@gmail.com</a><br>
+            Address: No. 47/1, Omprakash Nagar, Kundrathur, Chennai 600 069
+        </p>
+    </div>
+    <script>
+window.addEventListener('DOMContentLoaded', function() {
+    const certSection = document.getElementById('certificates-profile');
+    function onScroll() {
+        const rect = certSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            certSection.classList.add('visible');
+            window.removeEventListener('scroll', onScroll);
+        }
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+});
+</script>
+</body>
+</html>
